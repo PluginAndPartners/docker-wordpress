@@ -1,0 +1,32 @@
+#!/bin/bash
+echo "[=========================================================================]"
+echo "[ESSE SCRIPT EXCLUI TUDO PERMANENTEMENTE DA MAQUINA, DESEJA CONTINUAR?]"
+echo "[=========================================================================]"
+select yn in "Sim" "Não"; 
+do
+    case $yn in
+        "Sim") 
+        printf "\n\n\n"
+        docker compose down --volumes --remove-orphans
+        printf "\n\n\n"
+        echo "⚙️ Excluindo pasta do Wordpress" 
+        rm -rf ./src/
+        printf "\n\n\n"
+        echo "⚙️ Excluindo pasta com dados de containers"
+        rm -rf ./data/
+        printf "\n\n\n"
+        echo "⚙️ Excluindo certificados gerados"
+        rm -rf ./config/nginx/certs/*
+        rm -rf ./config/nginx/templates/*
+        printf "\n\n\n"
+        echo "⚙️ Excluindo ultima linha do /etc/hosts/ [Preciso da sua senha pra isso]"
+        sudo sed -i '' '/127.0.0.1 wordpress.local/g' /etc/hosts
+        printf "\n\n\n"
+        break
+        ;;
+        "Não")
+        echo "Beleza, tudo na paz"
+        break
+        ;;
+    esac
+done

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+printf "\n\n\n"
+echo -n "Por favor, coloque o caminho da pasta do seu plugin (por exemplo: /Users/mgouveia/Projects/cart-woocommerce): "
+read filepath
+
+if [ ! -d $filepath ]; then
+    echo "Por favor insira um caminho válido"
+    printf "\n\n\n"
+else
+    zip -j /tmp/woocommerce-mercadopago.zip $filepath/*
+    mkdir src/wp-content/plugins/woocommerce-mercadopago/
+    unzip /tmp/woocommerce-mercadopago.zip -d src/wp-content/plugins/woocommerce-mercadopago/
+    rm /tmp/woocommerce-mercadopago.zip
+    printf "\n\n\n"
+    echo -n "Plugin instalado com sucesso"
+    printf "\n\n\n"
+fi
+

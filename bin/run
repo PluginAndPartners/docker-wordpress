@@ -1,0 +1,4 @@
+#!/bin/bash
+printf "\n\n\n"
+docker compose up -d
+printf "\n\n\n"

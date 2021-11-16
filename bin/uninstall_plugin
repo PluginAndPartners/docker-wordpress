@@ -1,0 +1,18 @@
+#!/bin/bash
+printf "\n\n\n"
+echo "Você deseja desinstalar o plugin do Mercado Pago da loja?"
+select yn in "Sim" "Não"; 
+do
+    case $yn in
+        Sim) 
+        echo "Ótimo, desinstalando plugin..." 
+        docker exec -it myapp-wordpress wp plugin uninstall woocommerce-mercadopago --deactivate --allow-root
+        break
+        ;;
+        Não)
+        echo "Ótimo, qualquer coisa só me executar novamente (bash bin/uninstall_plugin)" 
+        break
+        ;;
+    esac
+done
+printf "\n\n\n"

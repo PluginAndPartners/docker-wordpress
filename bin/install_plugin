@@ -1,0 +1,21 @@
+#!/bin/bash
+printf "\n\n\n"
+echo "Você deseja instalar o plugin do Mercado Pago direto da loja?"
+select yn in "Sim, quero a ultima versão do plugin" "Sim, a versão que estou desenvolvendo" "Não"; 
+do
+    case $yn in
+        "Sim, quero a ultima versão do plugin") 
+        docker exec -it myapp-wordpress wp plugin install woocommerce-mercadopago --activate --allow-root
+        break
+        ;;
+        "Sim, a versão que estou desenvolvendo")
+        bash bin/sync
+        break
+        ;;
+        "Não")
+        echo "Fique a vontade para usar o script de sync para instalar a sua versão do plugin Mercado Pago" 
+        break
+        ;;
+    esac
+done
+printf "\n\n\n"
