@@ -1,4 +1,3 @@
-#!/bin/bash
 printf "\n\n\n"
 echo "⚙️ Subindo containers"
 docker compose up -d --force-recreate --build

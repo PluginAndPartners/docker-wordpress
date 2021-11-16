@@ -1,4 +1,3 @@
-#!/bin/bash
 printf "\n\n\n"
 echo "Você deseja instalar o plugin do Mercado Pago direto da loja?"
 select yn in "Sim, quero a ultima versão do plugin" "Sim, a versão que estou desenvolvendo" "Não"; 

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 printf "\n\n\n"
 echo -n "Por favor, coloque o caminho da pasta do seu plugin (por exemplo: /Users/mgouveia/Projects/cart-woocommerce): "
 read filepath

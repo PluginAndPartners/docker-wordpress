@@ -1,5 +1,3 @@
-#!/bin/bash
-
 printf "\n\n\n"
 echo "Instalando WP-CLI"
 docker exec -it myapp-wordpress curl -L https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp

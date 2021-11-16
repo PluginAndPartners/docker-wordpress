@@ -1,5 +1,3 @@
-#!/bin/bash
-
 printf "\n\n\n"
 echo "Gerando certificados com mkcert"
 docker exec -it myapp-nginx mkcert -install "wordpress.local"

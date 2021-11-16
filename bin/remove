@@ -1,4 +1,3 @@
-#!/bin/bash
 echo "[=========================================================================]"
 echo "[ESSE SCRIPT EXCLUI TUDO PERMANENTEMENTE DA MAQUINA, DESEJA CONTINUAR?]"
 echo "[=========================================================================]"

@@ -1,4 +1,3 @@
-#!/bin/bash
 printf "\n\n\n"
 echo "Você deseja desinstalar o plugin do Mercado Pago da loja?"
 select yn in "Sim" "Não"; 

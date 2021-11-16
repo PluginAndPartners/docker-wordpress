@@ -1,4 +1,3 @@
-#!/bin/bash
 printf "\n\n\n"
 docker compose down
 printf "\n\n\n"
