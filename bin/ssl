@@ -1,4 +1,9 @@
 printf "\n\n\n"
+echo "Gerando estrutura de pastas"
+mkdir config/nginx/
+mkdir config/nginx/templates/
+mkdir config/nginx/certs/
+printf "\n\n\n"
 echo "Gerando certificados com mkcert"
 docker exec -it myapp-nginx mkcert -install "wordpress.local"
 docker exec -it myapp-nginx mv wordpress.local.pem /etc/nginx/certs/
