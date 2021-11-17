@@ -7,13 +7,10 @@ bash bin/ssl
 printf "\n\n\n"
 echo "⚙️ Configurando Wordpress"
 bash bin/configure_wp
-echo "⚙️ Configurando Wordpress"
-bash bin/install_plugin
-printf "\n\n\n"
-printf "\n\n\n"
 echo "Acesse a sua loja: https://wordpress.local"
-printf "\n\n\n"
-echo "Usuário e senha: admin"
 printf "\n"
 echo "Configure o Woocommerce em https://wordpress.local/wp-admin"
+echo "[Usuário: admin / Senha: admin]"
+printf "\n"
+echo "Para instalar o plugin do Mercado Pago: bash bin/install_plugin"
 printf "\n\n\n"
