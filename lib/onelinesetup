@@ -2,5 +2,10 @@ set -o errexit
 
 curl -s https://raw.githubusercontent.com/PluginAndPartners/docker-wordpress/main/lib/template | bash
 
+
 cp .env.sample .env
+echo "Gerando estrutura de pastas"
+mkdir config/nginx/
+mkdir config/nginx/templates/
+mkdir config/nginx/certs/
 bash bin/setup
