@@ -4,7 +4,7 @@ select yn in "Sim, quero a ultima versão do plugin" "Sim, a versão que estou d
 do
     case $yn in
         "Sim, quero a ultima versão do plugin") 
-        docker exec -it myapp-wordpress wp plugin install woocommerce-mercadopago --activate --allow-root
+        docker exec -i myapp-wordpress wp plugin install woocommerce-mercadopago --activate --allow-root
         break
         ;;
         "Sim, a versão que estou desenvolvendo")

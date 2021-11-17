@@ -1,15 +1,15 @@
 printf "\n\n\n"
 echo "Instalando WP-CLI"
-docker exec -it myapp-wordpress curl -L https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
-docker exec -it myapp-wordpress chmod +x /usr/local/bin/wp
+docker exec -i myapp-wordpress curl -L https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
+docker exec -i myapp-wordpress chmod +x /usr/local/bin/wp
 printf "\n\n\n"
 echo "Baixando Wordpress"
-docker exec -it myapp-wordpress wp core download --locale='pt_BR' --allow-root
-docker exec -it myapp-wordpress wp core config --dbhost='mysql' --dbname='myapp' --dbuser='root' --dbpass='password' --locale='pt_BR' --skip-check --allow-root
-docker exec -it myapp-wordpress wp core install --allow-root --url="http://wordpress.local" --title="myapp" --admin_name='admin' --admin_password='admin' --admin_email='gouveia.maicon@gmail.com'
-docker exec -it myapp-wordpress wp option update siteurl "https://wordpress.local" --allow-root
+docker exec -i myapp-wordpress wp core download --locale='pt_BR' --allow-root
+docker exec -i myapp-wordpress wp core config --dbhost='mysql' --dbname='myapp' --dbuser='root' --dbpass='password' --locale='pt_BR' --skip-check --allow-root
+docker exec -i myapp-wordpress wp core install --allow-root --url="http://wordpress.local" --title="myapp" --admin_name='admin' --admin_password='admin' --admin_email='gouveia.maicon@gmail.com'
+docker exec -i myapp-wordpress wp option update siteurl "https://wordpress.local" --allow-root
 printf "\n\n\n"
-docker exec -it myapp-wordpress wp plugin install woocommerce --activate --allow-root
+docker exec -i myapp-wordpress wp plugin install woocommerce --activate --allow-root
 printf "\n\n\n"
-docker exec -it myapp-wordpress wp theme install storefront --activate --allow-root
+docker exec -i myapp-wordpress wp theme install storefront --activate --allow-root
 printf "\n\n\n"

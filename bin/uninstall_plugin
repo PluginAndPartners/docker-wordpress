@@ -5,7 +5,7 @@ do
     case $yn in
         Sim) 
         echo "Ótimo, desinstalando plugin..." 
-        docker exec -it myapp-wordpress wp plugin uninstall woocommerce-mercadopago --deactivate --allow-root
+        docker exec -i myapp-wordpress wp plugin uninstall woocommerce-mercadopago --deactivate --allow-root
         break
         ;;
         Não)

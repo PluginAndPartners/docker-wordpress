@@ -1,8 +1,8 @@
 printf "\n\n\n"
 echo "Gerando certificados com mkcert"
-docker exec -it myapp-nginx mkcert -install "wordpress.local"
-docker exec -it myapp-nginx mv wordpress.local.pem /etc/nginx/certs/
-docker exec -it myapp-nginx mv wordpress.local-key.pem /etc/nginx/certs/
+docker exec -i myapp-nginx mkcert -install "wordpress.local"
+docker exec -i myapp-nginx mv wordpress.local.pem /etc/nginx/certs/
+docker exec -i myapp-nginx mv wordpress.local-key.pem /etc/nginx/certs/
 printf "\n\n\n"
 echo "Copiando nova configuração para suportar SSL"
 cp images/nginx/conf/default.conf.conf config/nginx/templates/.
