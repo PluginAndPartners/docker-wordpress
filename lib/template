@@ -1,5 +1,5 @@
 git init -qqq
 git remote add origin https://github.com/PluginAndPartners/docker-wordpress
 git fetch origin -qqq
-git checkout origin/master -- compose
+git checkout origin/main
 git init
