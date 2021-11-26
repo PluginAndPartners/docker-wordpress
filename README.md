@@ -29,6 +29,20 @@ In the project folder, run the script that goes up the entire environment and co
 bash bin/setup
 ```
 
+## Links
+
+### Store
+<https://wordpress.local>
+
+### Admin
+<https://wordpress.local/wp-admin/>
+
+### PHPMyAdmin
+<http://localhost:8082/>
+
+### MailHog
+<http://localhost:8025/>
+
 ## Install Mercado Pago Plugin
 
 Execute the install script 
